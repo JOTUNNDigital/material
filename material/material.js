@@ -6,12 +6,20 @@ var mdc = {
 		component: {
 			load: function(components)
 			{
-				if(typeof compontents !== "string")
-					console.error("String expected (" + typeof components + " given).");
+				if(!components) return null;
 				
-				else
+				switch(typeof components)
 				{
-					components = components.split(",");
+					case "string":
+						components = components.split(",");
+						
+						return components;
+						break;
+					
+					default:
+						console.error("parameter `components` expects string (" + typeof components + " given).");
+					
+						break;
 				}
 			}
 		},
@@ -66,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function()
 	var elements = document.querySelectorAll("[class*='mdc-']"),
 	keys = Object.keys(mdc.base.foundation);
 
-	for(var i = elems.length; i-->0;)
+	for(var i = elements.length; i-->0;)
 	{
 		for(var j = keys.length; j-->0;)
 		{
