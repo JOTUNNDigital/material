@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="UTF-8">
+		
+		<title>VDM Material</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="mdc-library" content='{
+			"components": [
+				"base",
+				"button",
+				"dialog",
+				"fab",
+				"icon-button",
+				"select",
+				"snackbar",
+				"spinner",
+				"switch",
+				"text-field"
+			]
+		}'>
+
+		<!-- Material Library -->
+			<script src="lib/material.js"></script>
+	</head>
+	<body>
+		<style>
+			main
+			{
+				padding: 100px;
+			}
+		</style>
+	
+		<main class="mdc-root" id="root">
+			<div class="mdc-snackbar mdc-snackbar--open mdc-snackbar__special mdc-snackbar__test--buttery">
+				<div class="mdc-snackbar__surface">
+					<div class="mdc-snackbar__label" role="status" aria-live="polite">Snackbar message.</div>
+
+					<div class="mdc-snackbar__actions">
+						<button class="mdc-icon-button mdc-snackbar__dismiss material-icons" title="Dismiss" aria-hidden="true">close</button>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
