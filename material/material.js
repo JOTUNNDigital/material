@@ -12,8 +12,15 @@ var mdc = {
 				{
 					case "string":
 						components = components.split(",");
-						
+						components.count = components.length - 1;
+
+						for(; components.count-->0;)
+						{
+							console.log(components[components.count]);
+						}
+
 						return components;
+
 						break;
 					
 					default:
@@ -71,14 +78,17 @@ var mdc = {
 
 document.addEventListener("DOMContentLoaded", function()
 {
-	var elements = document.querySelectorAll("[class*='mdc-']"),
-	keys = Object.keys(mdc.base.foundation);
+	var elements = document.querySelectorAll("[class*='mdc-']");
+	elements.count = elements.length;
 
-	for(var i = elements.length; i-->0;)
+	var keys = Object.keys(mdc.base.foundation);
+	keys.count = keys.length;
+
+	for(; elements.count-->0;)
 	{
-		for(var j = keys.length; j-->0;)
+		for(; keys.count-->0;)
 		{
-			elements[i][keys[j]] = mdc.base.foundation[keys[j]];
+			elements[elements.count][keys[keys.count]] = mdc.base.foundation[keys[keys.count]];
 		}
 	}
 });
