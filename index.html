@@ -7,42 +7,18 @@
 		<title>VDM Material</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<meta name="mdc-library" content='{
-			"components": [
-				"base",
-				"button",
-				"dialog",
-				"fab",
-				"icon-button",
-				"select",
-				"snackbar",
-				"spinner",
-				"switch",
-				"text-field"
-			]
-		}'>
-
-		<!-- Material Library -->
-			<script src="material/material.js"></script>
+		<link rel="stylesheet" href="material/fonts/material-icons/material-icons.css">
+		<link rel="stylesheet" href="material/fonts/roboto/roboto.css">
+		<link rel="stylesheet" href="material/material.min.css">
+		<script src="material/material.min.js"></script>
 	</head>
 	<body>
-		<style>
-			main
-			{
-				padding: 100px;
-			}
-		</style>
-	
-		<main class="mdc-root" id="root">
-			<div class="mdc-snackbar mdc-snackbar--open mdc-snackbar__special mdc-snackbar__test--buttery">
-				<div class="mdc-snackbar__surface">
-					<div class="mdc-snackbar__label" role="status" aria-live="polite">Snackbar message.</div>
+		
+		<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+			<input type="checkbox" id="switch-2" class="mdl-switch__input">
+			<span class="mdl-switch__label"></span>
+		</label>
 
-					<div class="mdc-snackbar__actions">
-						<button class="mdc-icon-button mdc-snackbar__dismiss material-icons" title="Dismiss" aria-hidden="true">close</button>
-					</div>
-				</div>
-			</div>
-		</main>
+		
 	</body>
 </html>
